@@ -2,7 +2,19 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxt/eslint'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+    '@nuxt/eslint',
+    '@nuxtjs/sanity',
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', 'acceptHMRUpdate'],
+        storesDirs: ['./stores/**'],
+      },
+    ],
+  ],
   googleFonts: {
     inject: true,
     base64: true,
@@ -11,6 +23,12 @@ export default defineNuxtConfig({
     families: {
       Inter: [600, 700],
     },
+  },
+  sanity: {
+    projectId: '5zmqw6cj',
+    dataset: 'production',
+    apiVersion: '2024-07-13',
+    minimal: true,
   },
   vite: {
     server: {
