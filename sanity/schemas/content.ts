@@ -1,6 +1,7 @@
 import {Rule} from 'sanity'
 
 export default {
+  title: 'Content',
   name: 'content',
   type: 'document',
   fields: [

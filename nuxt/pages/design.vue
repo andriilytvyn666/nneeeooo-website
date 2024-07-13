@@ -7,7 +7,7 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-svh"
     >
       <SanityImage
-        v-for="i in design.designs"
+        v-for="i in design.designs.reverse()"
         :key="i.asset._ref"
         :asset-id="`${i.asset._ref}?h=1000`"
         class="aspect-[1/1.414] w-full"

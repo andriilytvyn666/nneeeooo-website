@@ -5,9 +5,9 @@
     }}</NuxtLink>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-svh">
       <SanityImage
-        v-for="i in design.photos"
+        v-for="i in design.photos.reverse()"
         :key="i.asset._ref"
-        :asset-id="`${i.asset._ref}?h=1000`"
+        :asset-id="`${i.asset._ref}?h=900`"
         class="aspect-[4/3] w-full"
       />
     </div>

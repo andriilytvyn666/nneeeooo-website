@@ -18,7 +18,7 @@ export default defineConfig({
           .items([
             S.listItem()
               .title('Content')
-              .child(S.document().schemaType('content').documentId('content')),
+              .child(S.document().title('Content').schemaType('content').documentId('content')),
             S.listItem()
               .title('Homepage')
               .child(S.document().schemaType('homepage').documentId('homepage')),
