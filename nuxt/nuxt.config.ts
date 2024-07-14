@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   sanity: {
     projectId: '5zmqw6cj',
     dataset: 'production',
-    apiVersion: '2024-07-13',
+    apiVersion: '2024-07-14',
     minimal: true,
   },
   vite: {
