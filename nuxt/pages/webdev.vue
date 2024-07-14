@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col justify-between h-svh overflow-scroll">
-    <NuxtLink to="/" class="absolute top-6 left-6 z-10">{{
+  <div class="flex flex-col justify-between overflow-scroll h-svh">
+    <NuxtLink to="/" class="absolute z-10 px-3 py-2 bg-bg top-6 left-6">{{
       '<- back'
     }}</NuxtLink>
     <div
