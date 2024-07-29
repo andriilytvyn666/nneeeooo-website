@@ -11,12 +11,17 @@
   },
   "dependencies": {
     "@nuxt/eslint": "^0.3.13",
+    "@nuxt/fonts": "^0.7.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/sanity": "^1.11.4",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.12.3",
+    "nuxt-icon-tw": "^0.1.4",
     "prettier": "^3.3.3",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/material-symbols": "^1.1.85"
   }
 }

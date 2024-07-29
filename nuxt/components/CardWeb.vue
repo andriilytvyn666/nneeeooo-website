@@ -1,9 +1,10 @@
+d
 <template>
   <NuxtLink
     :to="$props.link"
-    class="flex aspect-[4/3] items-end custom-card-web hover:opacity-70"
+    class="flex aspect-[4/3] items-end custom-card-web hover:opacity-80"
   >
-    <div class="flex flex-col gap-0 my-4 mx-4">
+    <div class="flex flex-col gap-0 mx-4 my-4">
       <h2 class="text-title">{{ $props.title }}</h2>
       <h3>{{ $props.subtitle }}</h3>
     </div>

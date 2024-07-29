@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts',
     '@nuxt/eslint',
     '@nuxtjs/sanity',
     [
@@ -14,15 +13,21 @@ export default defineNuxtConfig({
         storesDirs: ['./stores/**'],
       },
     ],
+    '@nuxt/fonts',
+    'nuxt-icon-tw',
   ],
-  googleFonts: {
-    inject: true,
-    base64: true,
-    outputDir: 'assets',
-    fontsDir: 'google-fonts.css',
-    families: {
-      Inter: [600, 700],
-    },
+  fonts: {
+    provider: 'local',
+    families: [
+      {
+        name: 'Helvetica',
+        provider: 'local',
+      },
+      {
+        name: 'Stretch Pro',
+        provider: 'local',
+      },
+    ],
   },
   sanity: {
     projectId: '5zmqw6cj',

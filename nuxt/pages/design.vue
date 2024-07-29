@@ -1,9 +1,18 @@
 <template>
-  <div class="flex flex-col justify-between overflow-scroll h-svh">
-    <NuxtLink to="/" class="absolute z-10 px-3 py-2 bg-bg top-6 left-6">{{
-      '<- back'
-    }}</NuxtLink>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  <div class="flex">
+    <NuxtLink
+      to="/"
+      class="flex flex-col items-center justify-between py-6 max-w-16 min-w-16 bg-bg font-stretch text-body-alt h-svh"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <Icon name="material-symbols:arrow-back" class="w-4 h-4" />
+        <span class="[writing-mode:vertical-lr] rotate-180"> back </span>
+      </div>
+      <span class="[writing-mode:vertical-lr] rotate-180 text-fg2">design</span>
+    </NuxtLink>
+    <div
+      class="grid grid-cols-1 overflow-scroll md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-svh"
+    >
       <div v-for="i in content.designs" :key="i.asset._ref">
         <SanityImage
           :asset-id="`${i.asset._ref}?h=1000`"

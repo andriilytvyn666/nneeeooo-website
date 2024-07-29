@@ -17,24 +17,26 @@ export default {
     colors: {
       fg: '#FFFFFF',
       bg: '#000000',
-      footer: '#4A4A4A',
+      fg3: '#101010',
+      fg2: '#181818',
     },
     fontFamily: {
-      body: ['Inter', 'Helvetica', 'Arial'],
+      helvetica: ['Helvetica', 'Arial'],
+      stretch: ['Stretch Pro', 'Arial'],
     },
     fontSize: {
-      body: [
+      'body': [
         '1rem',
         {
           lineHeight: '1.25rem',
           fontWeight: '600',
         },
       ],
-      title: [
-        '1.25rem',
+      'body-alt': [
+        '1rem',
         {
-          lineHeight: '1.5rem',
-          fontWeight: '700',
+          lineHeight: '1.25rem',
+          fontWeight: '400',
         },
       ],
     },
