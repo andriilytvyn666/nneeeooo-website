@@ -7,6 +7,7 @@ import pic from './pic'
 import pixGroup from './pixGroup'
 import project from './project'
 import projectGroup from './projectGroup'
+import webdevItem from './webdevItem'
 
 export const schemaTypes = [
   pic,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   link,
   homepage,
   content,
+  webdevItem,
 ]

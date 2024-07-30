@@ -1,16 +1,22 @@
 <template>
-  <div class="flex flex-col justify-between overflow-scroll h-svh">
-    <NuxtLink to="/" class="absolute z-10 px-3 py-2 bg-bg top-6 left-6">{{
-      '<- back'
-    }}</NuxtLink>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  <div class="flex">
+    <ButtonBack caption="webdev" />
+    <div class="flex flex-col overflow-scroll lg:grid lg:grid-cols-2 h-svh">
       <CardWeb
-        v-for="i in [...Array(15).keys()]"
-        :key="i"
-        title="Vasily Richter"
-        subtitle="Website for Ukrainian indie musician"
-        link="https://rihterb.pp.ua"
+        v-for="item in webdev"
+        :key="item.title"
+        :title="item.title"
+        :description="item.description"
+        :link="item.link"
+        :thumb-asset-id="item.thumbnail.asset._ref"
+        :stack="item.stack"
+        class="border-b odd:lg:border-r border-fg2"
       />
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+const store = useSanityStore()
+const { webdev } = await store.getContent()
+</script>

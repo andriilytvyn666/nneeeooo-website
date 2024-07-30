@@ -1,15 +1,6 @@
 <template>
   <div class="flex">
-    <NuxtLink
-      to="/"
-      class="flex flex-col items-center justify-between py-6 max-w-16 min-w-16 bg-bg font-stretch text-body-alt h-svh"
-    >
-      <div class="flex flex-col items-center gap-3">
-        <Icon name="material-symbols:arrow-back" class="w-4 h-4" />
-        <span class="[writing-mode:vertical-lr] rotate-180"> back </span>
-      </div>
-      <span class="[writing-mode:vertical-lr] rotate-180 text-fg2">design</span>
-    </NuxtLink>
+    <ButtonBack caption="design" />
     <div
       class="grid grid-cols-1 overflow-scroll md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-svh"
     >

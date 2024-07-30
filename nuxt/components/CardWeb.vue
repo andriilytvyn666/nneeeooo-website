@@ -1,30 +1,25 @@
-d
 <template>
   <NuxtLink
     :to="$props.link"
-    class="flex aspect-[4/3] items-end custom-card-web hover:opacity-80"
+    target="_blank"
+    class="relative flex h-fit aspect-video"
   >
-    <div class="flex flex-col gap-0 mx-4 my-4">
-      <h2 class="text-title">{{ $props.title }}</h2>
-      <h3>{{ $props.subtitle }}</h3>
+    <SanityImage :asset-id="thumbAssetId" />
+    <div class="absolute flex flex-col gap-1 bottom-6 left-6">
+      <span class="font-stretch text-body-alt [font-variant-ligatures:none]">
+        {{ title }}
+      </span>
+      <span>{{ description }}<br />{{ stack }}</span>
     </div>
   </NuxtLink>
 </template>
 
 <script lang="ts" setup>
 defineProps<{
+  thumbAssetId: string
   title: string
-  subtitle: string
+  description: string
+  stack: string
   link: string
 }>()
 </script>
-
-<style scoped>
-.custom-card-web {
-  background:
-    linear-gradient(-180deg, rgba(0, 0, 0, 0%) 40%, #000000 90%),
-    url('/public/CardWeb.jpg') no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-</style>

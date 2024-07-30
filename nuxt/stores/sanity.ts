@@ -15,7 +15,7 @@ export const useSanityStore = defineStore('sanity-store', () => {
   const getContent = async (): Promise<Content> =>
     sanityFetch<Content>(
       content,
-      groq`*[_type == "content"][0] { designs, photos }`
+      groq`*[_type == "content"][0] { designs, photos, webdev }`
     )
 
   return {

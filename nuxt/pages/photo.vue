@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col justify-between overflow-scroll h-svh">
-    <ButtonBack />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  <div class="flex">
+    <ButtonBack caption="photo" />
+    <div
+      class="grid grid-cols-1 overflow-scroll md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-svh"
+    >
       <div v-for="i in content.photos" :key="i.asset._ref">
         <SanityImage
           :asset-id="`${i.asset._ref}?h=900`"

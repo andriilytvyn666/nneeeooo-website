@@ -17,5 +17,11 @@ export default {
       of: [{type: 'image'}],
       validate: (rule: Rule) => rule.min(1).required(),
     },
+    {
+      name: 'webdev',
+      type: 'array',
+      of: [{type: 'webdevItem'}],
+      validate: (rule: Rule) => rule.min(1).required(),
+    },
   ],
 }
