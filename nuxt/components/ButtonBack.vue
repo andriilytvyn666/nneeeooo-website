@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     to="/"
-    class="flex flex-col items-center justify-between py-6 border-r max-w-16 min-w-16 bg-bg font-stretch text-body-alt h-svh borber border-fg2"
+    class="flex-col items-center justify-between hidden h-screen py-6 border-r max-w-16 min-w-16 bg-bg font-stretch text-body-alt borber border-fg2 lg:flex"
   >
     <div class="flex flex-col items-center gap-3">
       <Icon name="material-symbols:arrow-back" class="w-4 h-4" />

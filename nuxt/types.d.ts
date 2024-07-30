@@ -6,7 +6,8 @@ type Content = {
 }
 
 type webdevItem = {
-  thumbnail: image
+  thumbnail169: image
+  thumbnail43: image
   title: string
   description: string
   stack: string

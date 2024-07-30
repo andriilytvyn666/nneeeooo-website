@@ -6,12 +6,21 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'thumbnail',
+      name: 'thumbnail169',
+      title: 'Thumbnail Desktop',
+      description: '16:9 thumbnail',
       type: 'image',
       of: [{type: 'image/*'}],
       validate: (rule: Rule) => rule.required(),
     },
-
+    {
+      name: 'thumbnail43',
+      title: 'Thumbnail Mobile',
+      description: '4:3 thumbnail',
+      type: 'image',
+      of: [{type: 'image/*'}],
+      validate: (rule: Rule) => rule.required(),
+    },
     {
       name: 'title',
       type: 'string',
