@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col justify-between py-6 pl-6 h-svh font-stretch text-body-alt"
+    class="flex flex-col justify-between py-3 pl-3 lg:py-6 lg:pl-6 h-svh font-stretch text-body-alt"
   >
     <div class="flex flex-col gap-1">
       <NuxtLink class="flex gap-1 group">
@@ -36,8 +36,9 @@
       >
     </div>
     <div>
-      <span class="text-body-alt text-fg3"
-        >copyright © 2024 andrii lytvyn</span
+      <span class="text-body-alt text-fg3">
+        <span class="hidden md:inline">copyright</span>
+        © 2024 andrii lytvyn</span
       >
     </div>
   </div>

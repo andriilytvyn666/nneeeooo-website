@@ -2,7 +2,8 @@
   <div class="flex">
     <ButtonBack caption="webdev" class="hidden" />
     <div class="h-screen overflow-scroll">
-      <div class="flex flex-col lg:grid lg:grid-cols-2">
+      <Navbar caption="webdev" class="sticky top-0 z-10 lg:hidden" />
+      <div class="grid lg:grid-cols-2">
         <CardWeb
           v-for="item in webdev"
           :key="item.title"
@@ -12,7 +13,7 @@
           :thumb-asset-id-desktop="item.thumbnail169.asset._ref"
           :thumb-asset-id-mobile="item.thumbnail43.asset._ref"
           :stack="item.stack"
-          class="border-b odd:lg:border-r border-fg2"
+          class="border-b odd:lg:border-r border-fg3"
         />
       </div>
     </div>

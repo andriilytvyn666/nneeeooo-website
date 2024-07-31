@@ -17,8 +17,8 @@ export default {
     colors: {
       fg: '#FFFFFF',
       bg: '#000000',
-      fg3: '#101010',
-      fg2: '#181818',
+      fg3: '#181818',
+      fg2: '#3F3F3F',
     },
     fontFamily: {
       helvetica: ['Helvetica', 'Arial'],
