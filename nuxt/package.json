@@ -16,6 +16,7 @@
     "@nuxtjs/sanity": "^1.11.4",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@pinia/nuxt": "^0.5.1",
+    "@sanity/image-url": "^1.0.2",
     "nuxt": "^3.12.3",
     "nuxt-icon-tw": "^0.1.4",
     "prettier": "^3.3.3",
