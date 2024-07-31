@@ -26,7 +26,7 @@
 const sanityStore = useSanityStore()
 const content = await sanityStore.getContent()
 
-useServerSeoMeta({
+useSeoMeta({
   title: '[andrii lytvyn] - photo',
 })
 </script>
