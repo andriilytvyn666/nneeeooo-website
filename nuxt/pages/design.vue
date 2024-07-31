@@ -27,6 +27,6 @@ const sanityStore = useSanityStore()
 const content = await sanityStore.getContent()
 
 useSeoMeta({
-  title: '[andrii lytvyn] - webdev',
+  title: '[andrii lytvyn] - design',
 })
 </script>
