@@ -43,3 +43,9 @@
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+useServerSeoMeta({
+  title: '[andrii lytvyn]',
+})
+</script>

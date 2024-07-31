@@ -26,5 +26,7 @@
 const sanityStore = useSanityStore()
 const content = await sanityStore.getContent()
 
-console.log(useSanity().config)
+useServerSeoMeta({
+  title: '[andrii lytvyn] - webdev',
+})
 </script>
