@@ -27,4 +27,21 @@ const { webdev } = await store.getContent()
 useSeoMeta({
   title: '[andrii lytvyn] - webdev',
 })
+
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+  link: [...favicons],
+  meta: [
+    {
+      name: 'charset',
+      content: 'utf-8',
+    },
+    {
+      name: 'author',
+      content: 'Andrii Lytvyn',
+    },
+  ],
+})
 </script>

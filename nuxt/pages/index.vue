@@ -48,4 +48,21 @@
 useSeoMeta({
   title: '[andrii lytvyn]',
 })
+
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+  link: [...favicons],
+  meta: [
+    {
+      name: 'charset',
+      content: 'utf-8',
+    },
+    {
+      name: 'author',
+      content: 'Andrii Lytvyn',
+    },
+  ],
+})
 </script>

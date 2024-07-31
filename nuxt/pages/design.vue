@@ -29,4 +29,21 @@ const content = await sanityStore.getContent()
 useSeoMeta({
   title: '[andrii lytvyn] - design',
 })
+
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+  link: [...favicons],
+  meta: [
+    {
+      name: 'charset',
+      content: 'utf-8',
+    },
+    {
+      name: 'author',
+      content: 'Andrii Lytvyn',
+    },
+  ],
+})
 </script>
