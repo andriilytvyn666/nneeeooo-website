@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <ButtonBack caption="webdev" class="hidden" />
-    <div class="h-screen overflow-scroll">
+    <div class="overflow-scroll h-screen">
       <Navbar caption="webdev" class="sticky top-0 z-10 lg:hidden" />
       <div class="grid lg:grid-cols-2">
         <CardWeb
@@ -28,20 +28,5 @@ useSeoMeta({
   title: '[andrii lytvyn] - webdev',
 })
 
-useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
-  link: [...favicons],
-  meta: [
-    {
-      name: 'charset',
-      content: 'utf-8',
-    },
-    {
-      name: 'author',
-      content: 'Andrii Lytvyn',
-    },
-  ],
-})
+useHead(head)
 </script>

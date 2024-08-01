@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <ButtonBack caption="photo" />
-    <div class="h-screen overflow-scroll">
+    <div class="overflow-scroll h-screen">
       <Navbar caption="photo" class="sticky top-0 lg:hidden" />
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
@@ -30,20 +30,5 @@ useSeoMeta({
   title: '[andrii lytvyn] - photo',
 })
 
-useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
-  link: [...favicons],
-  meta: [
-    {
-      name: 'charset',
-      content: 'utf-8',
-    },
-    {
-      name: 'author',
-      content: 'Andrii Lytvyn',
-    },
-  ],
-})
+useHead(head)
 </script>
