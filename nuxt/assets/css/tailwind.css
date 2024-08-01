@@ -5,7 +5,6 @@
 @layer base {
   body {
     @apply bg-bg text-fg font-helvetica text-body;
-    @apply transition-opacity duration-300 ease-in-out transform;
   }
   *::selection {
     @apply bg-fg2;
@@ -13,6 +12,7 @@
 
   * {
     @apply select-none;
+    @apply transition-opacity duration-300 ease-in-out transform;
   }
 
   img {
