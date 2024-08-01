@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 export const useSanityStore = defineStore('sanity-store', () => {
   const content = ref<Content>()
   const design = ref<designItem[]>()
+  const photo = ref<photoItem[]>()
 
   const sanityFetch = async <T>(ref: Ref, query: string): Promise<T> => {
     if (ref.value !== undefined) return ref.value
@@ -22,12 +23,19 @@ export const useSanityStore = defineStore('sanity-store', () => {
   const getDesign = async (): Promise<designItem[]> =>
     sanityFetch<designItem[]>(
       design,
-      groq`*[_type == "design"] {'images': images[].asset, date} | order(date desc)`
+      groq`*[_type == "design"] {'images': images[], date} | order(date desc)`
+    )
+
+  const getPhoto = async (): Promise<photoItem[]> =>
+    sanityFetch<photoItem[]>(
+      photo,
+      groq`*[_type == "photo"] {'images': images[], date} | order(date desc)`
     )
 
   return {
     getContent,
     getDesign,
+    getPhoto,
   }
 })
 

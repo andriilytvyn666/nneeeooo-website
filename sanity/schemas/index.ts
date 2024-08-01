@@ -7,6 +7,7 @@ import project from './project'
 import projectGroup from './projectGroup'
 import webdevItem from './webdevItem'
 import design from './design'
+import photo from './photo'
 
 export const schemaTypes = [
   project,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   content,
   webdevItem,
   design,
+  photo,
 ]

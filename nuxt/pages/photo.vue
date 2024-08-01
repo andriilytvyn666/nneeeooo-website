@@ -7,7 +7,7 @@
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
         <NuxtLink
-          v-for="item in content.photos"
+          v-for="item in images"
           :key="item.asset._ref"
           :to="$urlFor(item).format('webp').height(1200).quality(100).url()"
           target="_blank"
@@ -24,7 +24,9 @@
 
 <script lang="ts" setup>
 const sanityStore = useSanityStore()
-const content = await sanityStore.getContent()
+const photo = await sanityStore.getPhoto()
+
+const images = photo.flatMap((item) => item.images)
 
 useSeoMeta({
   title: '[andrii lytvyn] - photo',
