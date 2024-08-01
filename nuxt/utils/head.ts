@@ -44,5 +44,9 @@ export default {
       name: 'author',
       content: 'Andrii Lytvyn',
     },
+    {
+      name: 'description',
+      content: 'graphic designer, photographer & webdev from ukraine',
+    },
   ],
 }
