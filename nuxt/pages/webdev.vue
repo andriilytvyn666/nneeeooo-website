@@ -22,7 +22,7 @@
 
 <script lang="ts" setup>
 const store = useSanityStore()
-const { webdev } = await store.getContent()
+const webdev = (await store.getWebdev()).webdev
 
 useSeoMeta({
   title: '[andrii lytvyn] - webdev',

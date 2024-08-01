@@ -1,9 +1,8 @@
-// Pages
-type Content = {
-  designs: image[]
-  photos: image[]
+type Webdev = {
   webdev: webdevItem[]
 }
+
+// Items
 
 type designItem = {
   date: string

@@ -1,9 +1,23 @@
 import {Rule} from 'sanity'
 
 export default {
-  title: 'Webdev Item',
+  title: 'Webdev',
   name: 'webdevItem',
   type: 'document',
+  preview: {
+    select: {
+      title: 'title',
+      media: 'thumbnail43',
+      mediaType: 'thumbnail43._type',
+    },
+    prepare({title, media, mediaType}) {
+      return {
+        title: title,
+        media: media,
+        mediaType: mediaType,
+      }
+    },
+  },
   fields: [
     {
       name: 'thumbnail169',

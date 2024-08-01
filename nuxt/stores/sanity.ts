@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
 
 export const useSanityStore = defineStore('sanity-store', () => {
-  const content = ref<Content>()
   const design = ref<designItem[]>()
   const photo = ref<photoItem[]>()
+  const webdev = ref<Webdev>()
 
   const sanityFetch = async <T>(ref: Ref, query: string): Promise<T> => {
     if (ref.value !== undefined) return ref.value
@@ -14,11 +14,8 @@ export const useSanityStore = defineStore('sanity-store', () => {
     return ref.value
   }
 
-  const getContent = async (): Promise<Content> =>
-    sanityFetch<Content>(
-      content,
-      groq`*[_type == "content"][0] { photos, webdev }`
-    )
+  const getWebdev = async (): Promise<Webdev> =>
+    sanityFetch<Webdev>(webdev, groq`*[_type == "webdev"][0] { webdev }`)
 
   const getDesign = async (): Promise<designItem[]> =>
     sanityFetch<designItem[]>(
@@ -33,9 +30,9 @@ export const useSanityStore = defineStore('sanity-store', () => {
     )
 
   return {
-    getContent,
     getDesign,
     getPhoto,
+    getWebdev,
   }
 })
 

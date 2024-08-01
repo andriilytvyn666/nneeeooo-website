@@ -16,16 +16,10 @@ export default defineConfig({
           .title('Main')
           .items([
             S.listItem()
-              .title('Content')
-              .child(S.document().title('Content').schemaType('content').documentId('content')),
-            S.listItem()
-              .title('Homepage')
-              .child(S.document().schemaType('homepage').documentId('homepage')),
+              .title('Webdev')
+              .child(S.document().title('Webdev').schemaType('webdev').documentId('webdev')),
             ...S.documentTypeListItems().filter(
-              (listItem) =>
-                !['project', 'homepage', 'link', 'content'].includes(
-                  `${listItem.getId()}`
-                )
+              (listItem) => !['webdev', 'webdevItem'].includes(`${listItem.getId()}`)
             ),
           ]),
     }),
