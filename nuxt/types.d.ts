@@ -5,6 +5,11 @@ type Content = {
   webdev: webdevItem[]
 }
 
+type designItem = {
+  date: string
+  images: image[]
+}
+
 type webdevItem = {
   thumbnail169: image
   thumbnail43: image

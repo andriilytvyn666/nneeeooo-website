@@ -3,15 +3,12 @@ import homepage from './homepage'
 import link from './link'
 import localePortableText from './localePortableText'
 import localeString from './localeString'
-import pic from './pic'
-import pixGroup from './pixGroup'
 import project from './project'
 import projectGroup from './projectGroup'
 import webdevItem from './webdevItem'
+import design from './design'
 
 export const schemaTypes = [
-  pic,
-  pixGroup,
   project,
   projectGroup,
   localeString,
@@ -20,4 +17,5 @@ export const schemaTypes = [
   homepage,
   content,
   webdevItem,
+  design,
 ]
