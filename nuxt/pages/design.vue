@@ -1,23 +1,21 @@
 <template>
   <div class="flex">
     <ButtonBack caption="design" />
-    <div class="overflow-scroll w-full h-screen">
+    <div class="w-full h-screen overflow-scroll">
       <Navbar caption="design" class="sticky top-0 z-10 lg:hidden" />
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      <masonry-wall
+        :items="images"
+        :ssr-columns="1"
+        :min-columns="1"
+        :max-columns="4"
+        :column-width="360"
       >
-        <NuxtLink
-          v-for="item in images"
-          :key="item.asset._ref"
-          :to="$urlFor(item).format('webp').height(1400).quality(100).url()"
-          target="_blank"
-        >
+        <template #default="{ item }">
           <img
             :src="$urlFor(item).format('webp').height(1000).quality(95).url()"
-            class="aspect-[1/1.414] w-full"
           />
-        </NuxtLink>
-      </div>
+        </template>
+      </masonry-wall>
     </div>
   </div>
 </template>

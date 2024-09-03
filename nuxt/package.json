@@ -17,6 +17,7 @@
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@pinia/nuxt": "^0.5.2",
     "@sanity/image-url": "^1.0.2",
+    "@yeger/vue-masonry-wall": "^5.0.15",
     "nuxt": "^3.12.4",
     "nuxt-icon-tw": "^0.1.4",
     "prettier": "^3.3.3",
