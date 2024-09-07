@@ -13,5 +13,11 @@ export default {
       of: [{type: 'string'}],
       validation: (rule: Rule) => rule.min(1).required(),
     },
+    {
+      title: 'External Link',
+      name: 'externalLink',
+      type: 'string',
+      validation: (rule: Rule) => rule.min(1).required(),
+    },
   ],
 }

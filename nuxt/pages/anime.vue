@@ -2,22 +2,38 @@
   <div class="flex">
     <ButtonBack caption="anime" />
     <div class="flex flex-col w-full h-screen overflow-scroll">
+      <Navbar caption="anime" class="sticky top-0 z-10 lg:hidden" />
       <div class="flex flex-col">
         <h1
-          class="flex items-center gap-2 px-4 py-6 md:p-6 font-stretch text-body-alt"
+          class="flex items-center justify-between p-3 md:p-6 font-stretch text-body-alt"
         >
-          <Icon
-            name="mdi:chevron-down"
-            size="20"
-            :class="`${favCollapsed ? '-rotate-90' : ''} transition-transform duration-300`"
-          />
-          <span @click="favCollapsed = !favCollapsed">FAVORITES</span>
+          <div class="flex flex-row-reverse gap-2">
+            <Icon
+              name="mdi:chevron-down"
+              size="20"
+              :class="`${favCollapsed ? '-rotate-90' : ''} transition-transform duration-300`"
+            />
+            <span @click="favCollapsed = !favCollapsed">
+              {{ 'favorites'.toUpperCase() }}
+            </span>
+          </div>
+          <NuxtLink
+            :to="favSanity.externalLink"
+            target="_blank"
+            class="items-center hidden gap-2 text-fg2 xl:flex"
+          >
+            <Icon name="simple-icons:anilist" />
+            ANILIST
+          </NuxtLink>
         </h1>
         <div
-          :class="`${favCollapsed ? 'max-h-0 overflow-hidden' : 'max-h-[64rem]'} md:transition-max-height  duration-300 w-full overflow-scroll sm:overflow-hidden grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8`"
+          :class="`${favCollapsed ? 'max-h-0 overflow-hidden' : 'max-h-[64rem]'} md:transition-max-height  duration-300 w-full overflow-scroll sm:overflow-hidden grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10`"
         >
           <div v-for="item in fav" :key="item.media.id" class="w-full h-full">
-            <img :src="item.media.coverImage.extraLarge" />
+            <img
+              :src="item.media.coverImage.extraLarge"
+              class="aspect-[320/460] w-full"
+            />
           </div>
         </div>
       </div>

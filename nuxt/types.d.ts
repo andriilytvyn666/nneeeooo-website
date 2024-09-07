@@ -25,6 +25,7 @@ type webdevItem = {
 
 type animeFavorites = {
   idList: string[]
+  externalLink: string
 }
 
 // Basics

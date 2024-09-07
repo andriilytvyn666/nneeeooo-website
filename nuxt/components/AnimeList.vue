@@ -3,7 +3,7 @@
     class="flex flex-col h-full overflow-scroll border-t border-r border-fg3"
   >
     <h1
-      class="flex items-center gap-2 px-4 py-6 md:p-6 font-stretch text-body-alt"
+      class="flex flex-row-reverse items-center gap-2 p-3 w-fit md:p-6 font-stretch text-body-alt"
       @click="collapsed = !collapsed"
     >
       <div class="xl:hidden">
@@ -62,3 +62,9 @@ defineProps<{
 
 const collapsed = ref<boolean>(false)
 </script>
+
+<style lang="postcss" scoped>
+h1 {
+  font-variant-ligatures: none;
+}
+</style>

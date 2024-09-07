@@ -32,7 +32,7 @@ export const useSanityStore = defineStore('sanity-store', () => {
   const getAnimeFavorites = async (): Promise<animeFavorites> =>
     sanityFetch<animeFavorites>(
       photo,
-      groq`*[_type == "animeFavorites"][0] {idList}`
+      groq`*[_type == "animeFavorites"][0] {idList, externalLink}`
     )
 
   return {
