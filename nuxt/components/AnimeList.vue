@@ -2,11 +2,16 @@
   <div
     class="flex flex-col h-full overflow-scroll border-t border-r border-fg3"
   >
-    <h1 class="flex items-center gap-2 p-6 font-stretch text-body-alt">
+    <h1
+      class="flex items-center gap-2 p-6 font-stretch text-body-alt"
+      @click="collapsed = !collapsed"
+    >
       <span>{{ caption.toUpperCase() }}</span>
     </h1>
-    <div class="flex flex-col gap-6 p-6 pt-0 overflow-scroll">
-      <div v-for="entry in data" :key="entry.media.id" class="flex gap-4">
+    <div
+      :class="`flex flex-col px-6 overflow-scroll ${collapsed ? 'max-h-0' : 'max-h-[256rem]'} transition-max-height`"
+    >
+      <div v-for="entry in data" :key="entry.media.id" class="flex gap-4 pb-6">
         <img
           :src="entry.media.coverImage.medium"
           class="aspect-[3/4.375] w-[3rem]"
@@ -40,4 +45,6 @@ defineProps<{
   caption: string
   data: entry[]
 }>()
+
+const collapsed = ref<boolean>(false)
 </script>

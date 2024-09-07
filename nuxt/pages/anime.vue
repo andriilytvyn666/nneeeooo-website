@@ -12,17 +12,17 @@
           <span @click="favCollapsed = !favCollapsed">FAVORITES</span>
         </h1>
         <div
-          :class="`${favCollapsed ? 'max-h-0 overflow-hidden' : 'max-h-[64rem]'} transition-max-height  duration-300 flex w-full overflow-scroll sm:overflow-hidden sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8`"
+          :class="`${favCollapsed ? 'max-h-0 overflow-hidden' : 'max-h-[64rem]'} transition-max-height  duration-300 w-full overflow-scroll sm:overflow-hidden grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8`"
         >
           <img
             v-for="item in fav"
             :key="item.media.id"
             :src="item.media.coverImage.extraLarge"
-            class="min-w-[100vw] sm:min-w-0 h-fit sm:h-full sm:w-full"
+            class="h-full sm:w-full"
           />
         </div>
       </div>
-      <div class="grid w-full h-full grid-cols-3 overflow-scroll">
+      <div class="grid w-full h-full overflow-scroll lg:grid-cols-3">
         <AnimeList caption="Planned" :data="planning.data.value!" />
         <AnimeList caption="Completed" :data="completed.data.value!" />
         <AnimeList caption="Current" :data="current.data.value!" />
