@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <ButtonBack caption="anime" />
-    <div class="flex flex-col w-full h-screen overflow-scroll">
+    <div class="flex flex-col w-full overflow-scroll h-dvh">
       <Navbar caption="anime" class="sticky top-0 z-10 lg:hidden" />
       <div class="flex flex-col">
         <h1
