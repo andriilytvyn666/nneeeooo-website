@@ -5,7 +5,7 @@
       <Navbar caption="anime" class="sticky top-0 z-10 lg:hidden" />
       <div class="flex flex-col">
         <h1
-          class="flex items-center justify-between p-3 md:p-6 font-stretch text-body-alt"
+          class="flex items-center justify-between p-3 lg:p-6 font-stretch text-body-alt"
         >
           <div class="flex flex-row-reverse gap-2">
             <Icon
@@ -20,10 +20,10 @@
           <NuxtLink
             :to="favSanity.externalLink"
             target="_blank"
-            class="items-center hidden gap-2 text-fg2 xl:flex"
+            class="flex items-center gap-2 text-fg2"
           >
             <Icon name="simple-icons:anilist" />
-            ANILIST
+            <span class="hidden lg:flex">ANILIST</span>
           </NuxtLink>
         </h1>
         <div

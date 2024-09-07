@@ -3,7 +3,7 @@
     class="flex flex-col h-full overflow-scroll border-t border-r border-fg3"
   >
     <h1
-      class="flex flex-row-reverse items-center gap-2 p-3 w-fit md:p-6 font-stretch text-body-alt"
+      class="flex flex-row-reverse items-center gap-2 p-3 w-fit lg:p-6 font-stretch text-body-alt"
       @click="collapsed = !collapsed"
     >
       <div class="xl:hidden">
