@@ -20,8 +20,19 @@ export default defineConfig({
             S.listItem()
               .title('Webdev')
               .child(S.document().title('Webdev').schemaType('webdev').documentId('webdev')),
+            S.listItem()
+              .title('Anime favorites')
+              .child(
+                S.document()
+                  .title('Anime favorites')
+                  .schemaType('animeFavorites')
+                  .documentId('animeFavorites'),
+              ),
             ...S.documentTypeListItems().filter(
-              (listItem) => !['webdev', 'webdevItem', 'media.tag'].includes(`${listItem.getId()}`)
+              (listItem) =>
+                !['webdev', 'webdevItem', 'media.tag', 'animeFavorites'].includes(
+                  `${listItem.getId()}`,
+                ),
             ),
           ]),
     }),

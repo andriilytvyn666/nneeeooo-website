@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     ],
     '@nuxt/fonts',
     'nuxt-icon-tw',
+    'nuxt-graphql-request',
   ],
   fonts: {
     provider: 'local',
@@ -28,6 +29,13 @@ export default defineNuxtConfig({
         provider: 'local',
       },
     ],
+  },
+  graphql: {
+    clients: {
+      anilist: {
+        endpoint: 'https://graphql.anilist.co',
+      },
+    },
   },
   sanity: {
     projectId: '5zmqw6cj',

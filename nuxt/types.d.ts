@@ -23,6 +23,10 @@ type webdevItem = {
   link: string
 }
 
+type animeFavorites = {
+  idList: string[]
+}
+
 // Basics
 type image = {
   asset: { _ref: string }

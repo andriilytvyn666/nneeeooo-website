@@ -29,10 +29,17 @@ export const useSanityStore = defineStore('sanity-store', () => {
       groq`*[_type == "photo"] {'images': images[], date} | order(date desc)`
     )
 
+  const getAnimeFavorites = async (): Promise<animeFavorites> =>
+    sanityFetch<animeFavorites>(
+      photo,
+      groq`*[_type == "animeFavorites"][0] {idList}`
+    )
+
   return {
     getDesign,
     getPhoto,
     getWebdev,
+    getAnimeFavorites,
   }
 })
 

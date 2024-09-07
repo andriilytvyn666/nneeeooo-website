@@ -19,6 +19,7 @@
     "@sanity/image-url": "^1.0.2",
     "@yeger/vue-masonry-wall": "^5.0.15",
     "nuxt": "^3.12.4",
+    "nuxt-graphql-request": "^8.1.1",
     "nuxt-icon-tw": "^0.1.4",
     "prettier": "^3.3.3",
     "vue": "latest"

@@ -40,7 +40,11 @@ export default {
         },
       ],
     },
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'max-height': 'max-height',
+      },
+    },
   },
   plugins: [],
 }
