@@ -7,13 +7,16 @@
         <h1
           class="flex items-center justify-between p-3 lg:p-6 font-stretch text-body-alt"
         >
-          <div class="flex flex-row-reverse gap-2">
+          <div
+            class="flex flex-row-reverse gap-2 w-fit"
+            @click="favCollapsed = !favCollapsed"
+          >
             <Icon
               name="mdi:chevron-down"
               size="20"
               :class="`${favCollapsed ? '-rotate-90' : ''} transition-transform duration-300`"
             />
-            <span @click="favCollapsed = !favCollapsed">
+            <span>
               {{ 'favorites'.toUpperCase() }}
             </span>
           </div>

@@ -21,10 +21,15 @@
       <NuxtLink
         href="https://instagram.com/harmyder.design"
         target="_blank"
-        class="flex gap-1 group"
+        class="flex gap-1 group text-[#777777]"
       >
         <span class="opacity-0 group-hover:opacity-100">+</span>
         <span>harmyder.design</span></NuxtLink
+      >
+
+      <NuxtLink href="/anime" class="flex gap-1 group text-[#777777]">
+        <span class="opacity-0 group-hover:opacity-100">+</span>
+        <span>anime</span></NuxtLink
       >
       <NuxtLink
         href="https://t.me/nneeeooo"
