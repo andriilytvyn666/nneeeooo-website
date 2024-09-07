@@ -1,13 +1,13 @@
 <template>
   <div class="flex">
     <ButtonBack caption="anime" />
-    <div class="flex flex-col w-full h-screen">
+    <div class="flex flex-col w-full h-screen overflow-scroll">
       <div class="flex flex-col">
         <h1 class="flex items-center gap-2 p-6 font-stretch text-body-alt">
           <Icon
             name="mdi:chevron-down"
             size="20"
-            :class="`${favCollapsed ? '-rotate-90' : ''} transition-transform dration-300`"
+            :class="`${favCollapsed ? '-rotate-90' : ''} transition-transform duration-300`"
           />
           <span @click="favCollapsed = !favCollapsed">FAVORITES</span>
         </h1>
@@ -22,7 +22,9 @@
           />
         </div>
       </div>
-      <div class="grid w-full h-full overflow-scroll lg:grid-cols-3">
+      <div
+        class="grid w-full xl:overflow-scroll h-fit xl:grid-cols-3 last:border-b border-fg3"
+      >
         <AnimeList caption="Planned" :data="planning.data.value!" />
         <AnimeList caption="Completed" :data="completed.data.value!" />
         <AnimeList caption="Current" :data="current.data.value!" />

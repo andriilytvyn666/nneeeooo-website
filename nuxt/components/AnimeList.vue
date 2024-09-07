@@ -6,12 +6,24 @@
       class="flex items-center gap-2 p-6 font-stretch text-body-alt"
       @click="collapsed = !collapsed"
     >
+      <div class="xl:hidden">
+        <Icon
+          name="mdi:chevron-down"
+          size="20"
+          :class="`${collapsed ? '-rotate-90' : ''} transition-transform duration-300`"
+        />
+      </div>
+
       <span>{{ caption.toUpperCase() }}</span>
     </h1>
     <div
-      :class="`flex flex-col px-6 overflow-scroll ${collapsed ? 'max-h-0' : 'max-h-[256rem]'} transition-max-height`"
+      :class="`flex flex-col px-6 overflow-scroll ${collapsed ? 'max-h-0 xl:max-h-[2048rem]' : 'max-h-[2048rem]'} transition-max-height duration-300`"
     >
-      <div v-for="entry in data" :key="entry.media.id" class="flex gap-4 pb-6">
+      <div
+        v-for="entry in data"
+        :key="entry.media.id"
+        class="flex gap-4 pb-6 first:pt-2"
+      >
         <img
           :src="entry.media.coverImage.medium"
           class="aspect-[3/4.375] w-[3rem]"
