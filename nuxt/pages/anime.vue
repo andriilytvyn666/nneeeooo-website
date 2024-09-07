@@ -3,7 +3,9 @@
     <ButtonBack caption="anime" />
     <div class="flex flex-col w-full h-screen overflow-scroll">
       <div class="flex flex-col">
-        <h1 class="flex items-center gap-2 p-6 font-stretch text-body-alt">
+        <h1
+          class="flex items-center gap-2 px-4 py-6 md:p-6 font-stretch text-body-alt"
+        >
           <Icon
             name="mdi:chevron-down"
             size="20"
@@ -12,14 +14,11 @@
           <span @click="favCollapsed = !favCollapsed">FAVORITES</span>
         </h1>
         <div
-          :class="`${favCollapsed ? 'max-h-0 overflow-hidden' : 'max-h-[64rem]'} transition-max-height  duration-300 w-full overflow-scroll sm:overflow-hidden grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8`"
+          :class="`${favCollapsed ? 'max-h-0 overflow-hidden' : 'max-h-[64rem]'} md:transition-max-height  duration-300 w-full overflow-scroll sm:overflow-hidden grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8`"
         >
-          <img
-            v-for="item in fav"
-            :key="item.media.id"
-            :src="item.media.coverImage.extraLarge"
-            class="h-full sm:w-full"
-          />
+          <div v-for="item in fav" :key="item.media.id" class="w-full h-full">
+            <img :src="item.media.coverImage.extraLarge" />
+          </div>
         </div>
       </div>
       <div

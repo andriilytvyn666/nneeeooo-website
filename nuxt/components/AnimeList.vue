@@ -3,7 +3,7 @@
     class="flex flex-col h-full overflow-scroll border-t border-r border-fg3"
   >
     <h1
-      class="flex items-center gap-2 p-6 font-stretch text-body-alt"
+      class="flex items-center gap-2 px-4 py-6 md:p-6 font-stretch text-body-alt"
       @click="collapsed = !collapsed"
     >
       <div class="xl:hidden">
@@ -17,7 +17,7 @@
       <span>{{ caption.toUpperCase() }}</span>
     </h1>
     <div
-      :class="`flex flex-col px-6 overflow-scroll ${collapsed ? 'max-h-0 xl:max-h-[2048rem]' : 'max-h-[2048rem]'} transition-max-height duration-300`"
+      :class="`flex flex-col px-4 sm:px-6 overflow-scroll ${collapsed ? 'max-h-0 xl:max-h-[2048rem]' : 'max-h-[256rem]'} md:transition-max-height duration-300`"
     >
       <div
         v-for="entry in data"
@@ -29,7 +29,9 @@
           class="aspect-[3/4.375] w-[3rem]"
         />
         <div class="flex flex-col gap-1">
-          <h2 class="line-clamp-1">{{ entry.media.title.romaji }}</h2>
+          <h2 class="line-clamp-1">
+            {{ entry.media.title.romaji }}
+          </h2>
           <h2 class="line-clamp-1 text-[#777777]">
             {{ entry.media.title.native }}
           </h2>
