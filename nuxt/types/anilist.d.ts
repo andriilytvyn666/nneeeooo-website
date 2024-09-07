@@ -16,6 +16,7 @@ type entry = {
 
 type media = {
   isFavourite: boolean
+  siteUrl: string
   id: number
   title: title
   coverImage: coverImage

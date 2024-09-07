@@ -29,12 +29,42 @@
         <div
           :class="`${favCollapsed ? 'max-h-0 overflow-hidden' : 'max-h-[64rem]'} md:transition-max-height  duration-300 w-full overflow-scroll sm:overflow-hidden grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10`"
         >
-          <div v-for="item in fav" :key="item.media.id" class="w-full h-full">
+          <NuxtLink
+            v-for="item in fav"
+            :key="item.media.id"
+            :to="item.media.siteUrl"
+            target="_blank"
+            class="relative w-full h-full group"
+          >
+            <div
+              class="absolute z-10 hidden w-full h-full opacity-0 md:flex group-hover:opacity-75 bg-bg"
+            />
+            <div
+              class="absolute z-20 hidden bottom-0 md:flex opacity-0 group-hover:opacity-100 px-3.5 pb-3 flex-col"
+            >
+              <h1 class="line-clamp-1">{{ item.media.title.romaji }}</h1>
+              <h2 class="line-clamp-1 text-[#777777]">
+                {{ item.media.title.native }}
+              </h2>
+              <h3 class="line-clamp-1 text-[#777777]">
+                {{
+                  new Date(
+                    item.media.startDate.year,
+                    item.media.startDate.month - 1,
+                    item.media.startDate.day
+                  ).toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric',
+                  })
+                }}
+              </h3>
+            </div>
             <img
               :src="item.media.coverImage.extraLarge"
               class="aspect-[320/460] w-full"
             />
-          </div>
+          </NuxtLink>
         </div>
       </div>
       <div
@@ -67,6 +97,7 @@ const query = gql`
         entries {
           media {
             id
+            siteUrl
             title {
               english
               romaji
