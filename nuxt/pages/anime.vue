@@ -11,6 +11,7 @@
             class="flex flex-row-reverse gap-2 w-fit"
             @click="favCollapsed = !favCollapsed"
           >
+            <!-- some bullshit -->
             <Icon
               name="mdi:chevron-down"
               size="20"
