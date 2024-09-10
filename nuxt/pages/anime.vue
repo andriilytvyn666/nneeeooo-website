@@ -11,7 +11,6 @@
             class="flex flex-row-reverse gap-2 w-fit"
             @click="favCollapsed = !favCollapsed"
           >
-            <!-- some bullshit -->
             <Icon
               name="mdi:chevron-down"
               size="20"
@@ -74,99 +73,28 @@
       <div
         class="grid w-full xl:overflow-scroll h-fit xl:grid-cols-3 last:border-b border-fg3"
       >
-        <AnimeList caption="Planned" :data="planning.data.value!" />
-        <AnimeList caption="Completed" :data="completed.data.value!" />
-        <AnimeList caption="Current" :data="current.data.value!" />
+        <AnimeList caption="Planned" :data="planning" />
+        <AnimeList caption="Completed" :data="completed" />
+        <AnimeList caption="Current" :data="current" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { gql } from 'nuxt-graphql-request/utils'
-
-const { $graphql } = useNuxtApp()
-
 const favCollapsed = ref<boolean>(false)
 
-const query = gql`
-  query ($userId: Int, $status: MediaListStatus, $sort: [MediaListSort]) {
-    MediaListCollection(
-      userId: $userId
-      status: $status
-      type: ANIME
-      sort: $sort
-    ) {
-      lists {
-        entries {
-          media {
-            id
-            siteUrl
-            title {
-              english
-              romaji
-              native
-            }
-            coverImage {
-              medium
-              extraLarge
-            }
-            startDate {
-              year
-              month
-              day
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-const planning = await useAsyncData('anilistPlanning', async () => {
-  const data: queryData = await $graphql.anilist.request(query, {
-    userId: 6365420,
-    status: 'PLANNING',
-    sort: 'ADDED_TIME_DESC',
-  })
-  return data.MediaListCollection.lists[0].entries
-})
-
-const completed = await useAsyncData(
-  'anilistCompleted',
-  async (): Promise<entry[]> => {
-    const data: queryData = await $graphql.anilist.request(query, {
-      userId: 6365420,
-      status: 'COMPLETED',
-      sort: 'FINISHED_ON_DESC',
-    })
-    return data.MediaListCollection.lists[0].entries
-  }
-)
-
-const current = await useAsyncData('anilistCurrent', async () => {
-  const data: queryData = await $graphql.anilist.request(query, {
-    userId: 6365420,
-    status: 'CURRENT',
-    sort: 'PROGRESS_DESC',
-  })
-  return data.MediaListCollection.lists[0].entries
-})
-
+const gqlStore = useGraphQlStore()
 const store = useSanityStore()
 const favSanity = await store.getAnimeFavorites()
 
-const fav = [
-  ...completed.data.value!.filter((entry) =>
-    favSanity.idList.includes(entry.media.id.toString())
-  ),
-  ...planning.data.value!.filter((entry) =>
-    favSanity.idList.includes(entry.media.id.toString())
-  ),
-  ...current.data.value!.filter((entry) =>
-    favSanity.idList.includes(entry.media.id.toString())
-  ),
-].sort((a, b) => a.media.id - b.media.id)
+const completed = await gqlStore.getCompleted()
+const planning = await gqlStore.getPlanning()
+const current = await gqlStore.getCurrent()
+
+const fav = [...completed, ...planning, ...current]
+  .sort((a, b) => a.media.id - b.media.id)
+  .filter((item) => favSanity.idList.includes(item.media.id.toString()))
 
 useSeoMeta({
   title: '[andrii lytvyn] - anime',

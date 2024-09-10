@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
+  routeRules: {
+    '/': { prerender: true },
+    '/*': { isr: 3600 },
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
@@ -13,6 +17,7 @@ export default defineNuxtConfig({
         storesDirs: ['./stores/**'],
       },
     ],
+    'pinia-plugin-persistedstate/nuxt',
     '@nuxt/fonts',
     'nuxt-icon-tw',
     'nuxt-graphql-request',
