@@ -2,10 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
-  routeRules: {
-    '/': { prerender: true },
-    '/*': { swr: 3600 },
-  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
