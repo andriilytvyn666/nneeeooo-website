@@ -20,6 +20,7 @@
       :class="`flex flex-col px-4 sm:px-6 overflow-scroll ${collapsed ? 'max-h-0 xl:max-h-[2048rem]' : 'max-h-[256rem]'} md:transition-max-height duration-300`"
     >
       <div
+        v-if="data.length >= 0"
         v-for="entry in data"
         :key="entry.media.id"
         class="flex gap-4 pb-6 first:pt-2"

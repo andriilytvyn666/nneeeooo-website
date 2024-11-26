@@ -1,5 +1,17 @@
 <template>
   <div class="flex">
+    <div
+      class="absolute z-10 px-3 py-2 transition-all border rounded-lg bottom-2 left-4 bg-fg3 border-fg3 lg:left-auto lg:right-3 lg:top-4 h-fit hover:border-fg2 w-fit"
+    >
+      <NuxtLink
+        :to="favSanity.externalLink"
+        target="_blank"
+        class="flex items-center gap-2 text-fg"
+      >
+        <Icon name="simple-icons:anilist" />
+        <span class="text-body-alt font-helvetica">Anilist</span>
+      </NuxtLink>
+    </div>
     <ButtonBack caption="anime" />
     <div class="flex flex-col w-full overflow-scroll h-dvh">
       <Navbar caption="anime" class="sticky top-0 z-10 lg:hidden" />
@@ -20,14 +32,6 @@
               {{ 'favorites'.toUpperCase() }}
             </span>
           </div>
-          <NuxtLink
-            :to="favSanity.externalLink"
-            target="_blank"
-            class="flex items-center gap-2 text-fg2"
-          >
-            <Icon name="simple-icons:anilist" />
-            <span class="hidden lg:flex">ANILIST</span>
-          </NuxtLink>
         </h1>
         <div
           :class="`${favCollapsed ? 'max-h-0 overflow-hidden' : 'max-h-[64rem]'} md:transition-max-height  duration-300 w-full overflow-scroll sm:overflow-hidden grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10`"
@@ -102,3 +106,9 @@ useSeoMeta({
 
 useHead(head)
 </script>
+
+<style lang="postcss">
+*::-webkit-scrollbar {
+  display: none;
+}
+</style>
