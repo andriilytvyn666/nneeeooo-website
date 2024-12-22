@@ -47,6 +47,7 @@
         <Button
           text="resume"
           icon="ph:read-cv-logo-fill"
+          target="_blank"
           href="https://drive.google.com/file/d/15Tk0T6L5gikzv_qtyirpPXdE-Z2UEk98/view?usp=sharing"
         />
       </div>
