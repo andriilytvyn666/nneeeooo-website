@@ -44,11 +44,11 @@
           href="https://t.me/nneeeooo"
           target="_blank"
         />
-        <!-- <Button
+        <Button
           text="resume"
           icon="ph:read-cv-logo-fill"
-          href="https://t.me/nneeeooo"
-        /> -->
+          href="https://drive.google.com/file/d/15Tk0T6L5gikzv_qtyirpPXdE-Z2UEk98/view?usp=sharing"
+        />
       </div>
     </div>
 
