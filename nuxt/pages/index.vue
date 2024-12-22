@@ -64,7 +64,7 @@
 
 <script lang="ts" setup>
 useSeoMeta({
-  title: '[andrii lytvyn]',
+  title: 'Andrii Lytvyn',
 })
 
 useHead(head)

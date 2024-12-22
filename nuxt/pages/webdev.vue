@@ -23,7 +23,7 @@ const store = useSanityStore()
 const webdev = (await store.getWebdev()).webdev
 
 useSeoMeta({
-  title: '[andrii lytvyn] - webdev',
+  title: 'Andrii Lytvyn - Webdev',
 })
 
 useHead(head)

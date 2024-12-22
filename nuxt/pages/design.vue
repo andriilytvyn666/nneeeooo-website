@@ -45,7 +45,7 @@ design[0]
 const images = design.flatMap((item) => item.images)
 
 useSeoMeta({
-  title: '[andrii lytvyn] - design',
+  title: 'Andrii Lytvyn - Design',
 })
 
 useHead(head)
