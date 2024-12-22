@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col justify-center py-3 pl-3 lg:py-6 lg:pl-24 h-svh text-body-alt hell"
+    class="flex flex-col justify-center py-3 pl-3 lg:py-6 lg:pl-24 h-svh text-body hell"
   >
     <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-3">
