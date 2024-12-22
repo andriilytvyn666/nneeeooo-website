@@ -22,7 +22,8 @@
     "nuxt-icon-tw": "^1.0.0",
     "pinia-plugin-persistedstate": "^4.2.0",
     "prettier": "^3.4.2",
-    "vue": "latest"
+    "vue": "latest",
+    "estree-walker": "2.0.2"
   },
   "devDependencies": {
     "@iconify-json/material-symbols": "^1.2.12"
