@@ -1,15 +1,13 @@
 <template>
   <div class="flex hell">
     <div class="w-full px-2 py-3 overflow-scroll h-svh md:p-6">
-      <Navbar caption="design" class="">
-        <NuxtLink to="https://www.behance.net/e45b410b" target="_blank">
-          <div
-            class="flex px-4 py-2.5 rounded-lg bg-fg text-bg w-fit items-center gap-2 hover:-translate-y-0.5 transition-transform"
-          >
-            <Icon name="simple-icons:behance" class="w-4 h-4" />
-            <span>behance</span>
-          </div>
-        </NuxtLink>
+      <Navbar>
+        <Button
+          text="behance"
+          icon="simple-icons:behance"
+          href="https://www.behance.net/e45b410b"
+          target="_blank"
+        />
       </Navbar>
       <div
         class="grid grid-cols-1 gap-y-[0.875rem] gap-x-4 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"

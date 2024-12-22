@@ -28,9 +28,9 @@ export default {
     },
     fontSize: {
       body: [
-        '1.25rem',
+        '1rem',
         {
-          lineHeight: '1.5rem',
+          lineHeight: '1.25rem',
           fontWeight: '400',
         },
       ],

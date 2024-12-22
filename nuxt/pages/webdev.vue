@@ -1,9 +1,8 @@
 <template>
-  <div class="flex">
-    <ButtonBack caption="webdev" class="hidden" />
-    <div class="overflow-scroll h-screen">
-      <Navbar caption="webdev" class="sticky top-0 z-10 lg:hidden" />
-      <div class="grid lg:grid-cols-2">
+  <div class="flex hell">
+    <div class="px-2 py-3 overflow-scroll md:p-6 h-svh">
+      <Navbar />
+      <div class="grid gap-4 lg:grid-cols-2">
         <CardWeb
           v-for="item in webdev"
           :key="item.title"
@@ -13,7 +12,6 @@
           :thumb-asset-id-desktop="item.thumbnail169.asset._ref"
           :thumb-asset-id-mobile="item.thumbnail43.asset._ref"
           :stack="item.stack"
-          class="border-b odd:lg:border-r border-fg3"
         />
       </div>
     </div>

@@ -1,15 +1,15 @@
 <template>
   <div
-    class="flex flex-col justify-center py-3 pl-3 lg:py-6 lg:pl-24 h-svh text-body hell"
+    class="flex flex-col justify-center pl-6 md:pt-0 md:pl-24 h-svh text-body hell"
   >
     <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-3">
         <NuxtLink class="flex gap-1 group">
-          <span class="font-moderniz leading-8 text-[20px]"
+          <span class="font-moderniz leading-6 text-[20px]"
             >Andrii Lytvyn</span
           ></NuxtLink
         >
-        <div class="flex flex-col gap-1">
+        <div class="flex flex-col gap-1 text-[20px] leading-6">
           <NuxtLink
             to="/design"
             class="hover:underline hover:decoration-dotted"
@@ -32,19 +32,23 @@
         </div>
       </div>
       <div class="flex gap-2">
-        <div
-          class="flex px-4 py-2.5 rounded-lg bg-fg text-bg w-fit items-center gap-2 hover:-translate-y-0.5 transition-transform"
-        >
-          <Icon name="bx:bxl-gmail" class="w-4 h-4" />
-          <span>email</span>
-        </div>
-        <div
-          class="flex px-4 py-2.5 rounded-lg bg-fg text-bg w-fit items-center gap-2 hover:-translate-y-0.5 transition-transform"
-        >
-          <Icon name="ri:telegram-2-fill" class="w-4 h-4" />
-
-          <span>telegram</span>
-        </div>
+        <Button
+          text="email"
+          icon="bx:bxl-gmail"
+          href="mailto:lytvyn.andrii.contact@gmail.com"
+          target="_blank"
+        />
+        <Button
+          text="telegram"
+          icon="ri:telegram-2-fill"
+          href="https://t.me/nneeeooo"
+          target="_blank"
+        />
+        <!-- <Button
+          text="resume"
+          icon="ph:read-cv-logo-fill"
+          href="https://t.me/nneeeooo"
+        /> -->
       </div>
     </div>
 
