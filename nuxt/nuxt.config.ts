@@ -29,6 +29,10 @@ export default defineNuxtConfig({
         name: 'Stretch Pro',
         provider: 'local',
       },
+      {
+        name: 'Coolvetica Rg',
+        provider: 'local',
+      },
     ],
   },
   graphql: {

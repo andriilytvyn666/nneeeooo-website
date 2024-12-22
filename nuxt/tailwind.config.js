@@ -23,19 +23,14 @@ export default {
     fontFamily: {
       helvetica: ['Helvetica', 'Arial'],
       stretch: ['Stretch Pro', 'Arial'],
+      coolvetica: ['Coolvetica Rg', 'Arial'],
+      moderniz: ['MODERNIZ', 'Arial'],
     },
     fontSize: {
-      'body': [
-        '1rem',
+      body: [
+        '1.25rem',
         {
-          lineHeight: '1.25rem',
-          fontWeight: '600',
-        },
-      ],
-      'body-alt': [
-        '1rem',
-        {
-          lineHeight: '1.25rem',
+          lineHeight: '1.5rem',
           fontWeight: '400',
         },
       ],

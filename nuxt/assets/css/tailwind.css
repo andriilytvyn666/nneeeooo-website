@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-bg text-fg font-helvetica text-body;
+    @apply bg-bg text-fg font-coolvetica text-body;
   }
   *::selection {
     @apply bg-fg2;

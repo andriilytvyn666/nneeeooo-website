@@ -10,22 +10,21 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/eslint": "^0.4.0",
-    "@nuxt/fonts": "^0.7.1",
+    "@nuxt/eslint": "^0.7.4",
+    "@nuxt/fonts": "^0.10.3",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@nuxtjs/sanity": "^1.11.5",
-    "@nuxtjs/tailwindcss": "^6.12.1",
-    "@pinia/nuxt": "^0.5.2",
-    "@sanity/image-url": "^1.0.2",
-    "@yeger/vue-masonry-wall": "^5.0.15",
-    "nuxt": "^3.12.4",
+    "@nuxtjs/sanity": "^1.13.3",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@pinia/nuxt": "^0.9.0",
+    "@sanity/image-url": "^1.1.0",
+    "nuxt": "^3.14.1592",
     "nuxt-graphql-request": "^8.1.1",
-    "nuxt-icon-tw": "^0.1.4",
-    "pinia-plugin-persistedstate": "^4.0.1",
-    "prettier": "^3.3.3",
+    "nuxt-icon-tw": "^1.0.0",
+    "pinia-plugin-persistedstate": "^4.2.0",
+    "prettier": "^3.4.2",
     "vue": "latest"
   },
   "devDependencies": {
-    "@iconify-json/material-symbols": "^1.1.85"
+    "@iconify-json/material-symbols": "^1.2.12"
   }
 }
