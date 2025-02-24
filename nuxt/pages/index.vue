@@ -48,7 +48,7 @@
           text="resume"
           icon="ph:read-cv-logo-fill"
           target="_blank"
-          href="https://drive.google.com/file/d/15Tk0T6L5gikzv_qtyirpPXdE-Z2UEk98/view?usp=sharing"
+          href="https://drive.google.com/file/d/1B8MZ8w2O8x_AqAqBksw5DgOSIH0VAoZV/view?usp=sharing"
         />
       </div>
     </div>
