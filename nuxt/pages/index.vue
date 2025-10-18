@@ -14,7 +14,7 @@
             to="/design"
             class="hover:underline hover:decoration-dotted"
           >
-            poster designs
+            design portfolio
           </NuxtLink>
           <NuxtLink
             to="/webdev"
