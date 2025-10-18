@@ -1,14 +1,16 @@
 import {Rule} from 'sanity'
+import {ImagesIcon} from '@sanity/icons'
 
 export default {
   title: 'Design',
   name: 'design',
   type: 'document',
+  icon: ImagesIcon,
   preview: {
     select: {
       title: 'date',
-      media: 'images.0',
-      mediaType: 'images.0._type',
+      media: 'posts.0.preview',
+      mediaType: 'posts.0.preview._type',
     },
     prepare({title, media, mediaType}) {
       return {
@@ -28,10 +30,9 @@ export default {
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'images',
-      description: '0.3x of A2, sRGB, 72dpi',
+      name: 'posts',
       type: 'array',
-      of: [{type: 'image'}],
+      of: [{type: 'designItem'}],
       validate: (rule: Rule) => rule.min(1).required(),
     },
   ],

@@ -6,7 +6,10 @@ type Webdev = {
 
 type designItem = {
   date: string
-  images: image[]
+  posts: {
+    preview: image
+    link: string
+  }[]
 }
 
 type photoItem = {

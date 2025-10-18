@@ -1,9 +1,11 @@
 import {Rule} from 'sanity'
+import {CropIcon} from '@sanity/icons'
 
 export default {
   title: 'Photo',
   name: 'photo',
   type: 'document',
+  icon: CropIcon,
   preview: {
     select: {
       title: 'date',

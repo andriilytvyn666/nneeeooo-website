@@ -14,7 +14,7 @@
             to="/design"
             class="hover:underline hover:decoration-dotted"
           >
-            design portfolio
+            poster designs
           </NuxtLink>
           <NuxtLink
             to="/webdev"
@@ -22,16 +22,22 @@
           >
             webdev projects
           </NuxtLink>
-          <NuxtLink
+          <!-- <NuxtLink
             href="https://instagram.com/harmyder.design"
             target="_blank"
             class="hover:underline hover:decoration-dotted"
           >
             harmyder.design
-          </NuxtLink>
+          </NuxtLink> -->
         </div>
       </div>
       <div class="flex gap-2">
+        <Button
+          text="behance"
+          icon="simple-icons:behance"
+          href="https://www.behance.net/e45b410b"
+          target="_blank"
+        />
         <Button
           text="email"
           icon="bx:bxl-gmail"
@@ -44,12 +50,12 @@
           href="https://t.me/nneeeooo"
           target="_blank"
         />
-        <Button
+        <!-- <Button
           text="resume"
           icon="ph:read-cv-logo-fill"
           target="_blank"
           href="https://drive.google.com/file/d/1B8MZ8w2O8x_AqAqBksw5DgOSIH0VAoZV/view?usp=sharing"
-        />
+        /> -->
       </div>
     </div>
 

@@ -23,7 +23,7 @@ export const useSanityStore = defineStore(
     const getDesign = async (): Promise<designItem[]> =>
       sanityFetch<designItem[]>(
         design,
-        groq`*[_type == "design"] {'images': images[], date} | order(date desc)`
+        groq`*[_type == "design"] { posts[] { preview, link }, date } | order(date desc)`
       )
 
     const getPhoto = async (): Promise<photoItem[]> =>
