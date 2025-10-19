@@ -16,12 +16,13 @@
           >
             design portfolio
           </NuxtLink>
-          <NuxtLink
+          more coming soon...
+          <!-- <NuxtLink
             to="/webdev"
             class="hover:underline hover:decoration-dotted"
           >
             webdev projects
-          </NuxtLink>
+          </NuxtLink> -->
           <!-- <NuxtLink
             href="https://instagram.com/harmyder.design"
             target="_blank"
