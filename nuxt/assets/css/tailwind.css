@@ -5,7 +5,19 @@
 @layer base {
   body {
     @apply bg-bg text-fg font-coolvetica text-body;
+    /* @apply h-screen overflow-hidden; */
+    @apply bg-[#ff0000];
+    @apply overflow-hidden;
+    @apply h-[110vh];
+    background-image: url('/public/grid.jpg');
+    background-size: cover;
   }
+
+  .grid-bg {
+    background-image: url('/public/grid.jpg');
+    background-size: cover;
+  }
+
   *::selection {
     @apply bg-fg2;
   }

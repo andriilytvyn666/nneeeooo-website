@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col justify-center pl-6 md:pt-0 md:pl-24 h-svh text-body hell"
+    class="flex flex-col justify-center pl-6 md:pt-0 md:pl-24 h-svh text-body"
   >
     <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-3">
@@ -75,10 +75,3 @@ useSeoMeta({
 
 useHead(head)
 </script>
-
-<style lang="postcss">
-.hell {
-  background-image: url('/public/grid.jpg');
-  background-size: cover;
-}
-</style>
