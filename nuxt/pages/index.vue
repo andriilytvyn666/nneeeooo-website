@@ -1,22 +1,30 @@
 <template>
   <div
-    class="flex flex-col justify-center pl-6 md:pt-0 md:pl-24 h-svh text-body"
+    class="flex flex-col py-6 justify-center pl-6 md:pt-0 md:pl-24 text-body h-svh"
   >
     <div class="flex flex-col gap-6">
-      <div class="flex flex-col gap-3">
-        <NuxtLink class="flex gap-1 group">
+      <div
+        class="flex flex-col gap-3 md:max-w-[50vw] lg:max-w-[40vw] xl:max-w-[30vw] max-w-[90vw] sm:max-w-[70vw]"
+      >
+        <span class="flex flex-col gap-6 group">
+          <NuxtImg
+            src="/picture.png"
+            alt="Andrii Lytvyn"
+            class="rounded-lg max-w-[12rem]"
+          />
           <span class="font-moderniz leading-6 text-[20px]"
             >Andrii Lytvyn</span
-          ></NuxtLink
+          ></span
         >
         <div class="flex flex-col gap-1 text-[20px] leading-6">
-          <NuxtLink
+          <!-- <NuxtLink
             to="/design"
             class="hover:underline hover:decoration-dotted"
           >
             design portfolio
-          </NuxtLink>
-          more coming soon...
+          </NuxtLink> -->
+          Video editor and multimedia engineer skilled in AI-generated content,
+          video production, post‑processing, AI voiceovers and subtitling.
           <!-- <NuxtLink
             to="/webdev"
             class="hover:underline hover:decoration-dotted"
@@ -32,12 +40,31 @@
           </NuxtLink> -->
         </div>
       </div>
-      <div class="flex gap-2">
+      <div class="flex flex-wrap gap-2">
+        <!-- <Button
+            text="behance"
+            icon="simple-icons:behance"
+            href="https://www.behance.net/e45b410b"
+            target="_blank"
+          /> -->
         <Button
-          text="behance"
-          icon="simple-icons:behance"
-          href="https://www.behance.net/e45b410b"
+          text="github"
+          icon="simple-icons:github"
+          href="https://github.com/nneeeooo"
           target="_blank"
+        />
+
+        <Button
+          text="linkedin"
+          icon="simple-icons:linkedin"
+          href="https://www.linkedin.com/in/andrii-lytvyn-profile/"
+          target="_blank"
+        />
+        <Button
+          text="resume"
+          icon="ph:read-cv-logo-fill"
+          target="_blank"
+          href="/Resume_Andrii_Lytvyn.pdf"
         />
         <Button
           text="email"
@@ -51,12 +78,6 @@
           href="https://t.me/nneeeooo"
           target="_blank"
         />
-        <!-- <Button
-          text="resume"
-          icon="ph:read-cv-logo-fill"
-          target="_blank"
-          href="https://drive.google.com/file/d/1B8MZ8w2O8x_AqAqBksw5DgOSIH0VAoZV/view?usp=sharing"
-        /> -->
       </div>
     </div>
 

@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'nuxt-icon-tw',
     'nuxt-graphql-request',
+    '@nuxt/image',
   ],
   fonts: {
     provider: 'local',
